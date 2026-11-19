@@ -1,4 +1,5 @@
 from django.core.management.base import BaseCommand
+from django.contrib.auth.models import User
 from inventario.models import Categoria, Proveedor, Producto
 
 class Command(BaseCommand):
@@ -82,5 +83,8 @@ class Command(BaseCommand):
             categoria=cat_audio,
             proveedor=prov_global
         )
-
+        # Crear superusuario para pruebas JWT
+        if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser('admin', 'admin@inacap.cl', 'admin123')
+            self.stdout.write("Usuario admin creado.")
         self.stdout.write(self.style.SUCCESS("¡Éxito! Base de datos poblada con 3 categorías, 2 proveedores y 4 productos."))

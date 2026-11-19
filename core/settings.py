@@ -110,3 +110,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # --- CONFIGURACIÓN CORS (Permite que React consuma la API) ---
 CORS_ALLOW_ALL_ORIGINS = True  # Permite peticiones desde localhost (Vite) y dominios de despliegue
+
+# --- AUTENTICACIÓN JWT (djangorestframework-simplejwt) ---
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
