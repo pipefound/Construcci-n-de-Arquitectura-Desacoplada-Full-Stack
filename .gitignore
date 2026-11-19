@@ -1,0 +1,21 @@
+# Entorno virtual
+env/
+venv/
+.venv/
+
+# Variables de entorno confidenciales (¡NUNCA SUBIR A GITHUB!)
+.env
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local temporal
+*.sqlite3
+
+# Frontend dependencias y builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.DS_Store
