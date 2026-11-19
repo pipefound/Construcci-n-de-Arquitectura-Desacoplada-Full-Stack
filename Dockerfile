@@ -1,5 +1,5 @@
 # Imagen base oficial de Python en versión ligera (Linux Slim)
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Evitar que Python escriba archivos .pyc y forzar buffer de salida para ver logs en Render
 ENV PYTHONDONTWRITEBYTECODE 1
