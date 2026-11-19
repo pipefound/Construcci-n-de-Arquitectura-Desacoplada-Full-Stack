@@ -87,4 +87,5 @@ class Command(BaseCommand):
         if not User.objects.filter(username='admin').exists():
             User.objects.create_superuser('admin', 'admin@inacap.cl', 'admin123')
             self.stdout.write("Usuario admin creado.")
+            
         self.stdout.write(self.style.SUCCESS("¡Éxito! Base de datos poblada con 3 categorías, 2 proveedores y 4 productos."))
